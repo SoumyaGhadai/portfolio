@@ -1,0 +1,131 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+h1 {
+  text-align: left;
+  font-size: 3rem;
+  margin: 0;
+}
+
+section {
+  margin-bottom: 30px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  border-radius: 8px;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Theme variables */
+.light-mode {
+  --header-bg: #222;
+  --header-text: #fff;
+  --card-bg: #fff;
+  --footer-bg: #222;
+  --footer-text: #fff;
+  --link: #0077b6;
+  --accent: #0077b6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.dark-mode {
+  --header-bg: #1a1a1a;
+  --header-text: #eaeaea;
+  --card-bg: #2b2b2b;
+  --footer-bg: #1a1a1a;
+  --footer-text: #aaa;
+  --link: #00bfff;
+  --accent: #00bfff;
+  background: #121212;
+  color: #e0e0e0;
+}
+.dark-mode:hover {
+  box-shadow: 5px 5px #aaa;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list:hover {
+  box-shadow: 5px 5px grey;
+}
+
+.skills-list li {
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--link);
+  font-weight: 500;
+}
