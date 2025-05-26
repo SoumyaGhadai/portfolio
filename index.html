@@ -1,280 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-    <title>Soumya's Portfolio 📃</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soumya's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">DEV<span>PORTFOLIO</span></a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                        </button>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
+<body class="light-mode">
+  <div class="container">
+
+    <header>
+      <div class="profile-container">
+        <img src="profpic.jpg" alt="Soumya's photo" class="profile-pic">
+        <div>
+          <h1>Soumya Ananda Ghadai</h1>
+          <p class="tagline">Cloud Engineer ☁️• DevOps 🧑‍💻• SRE</p>
         </div>
+      </div>
+      <button id="toggle-mode">🌙 Dark Mode</button>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title animate-fade-in">Hi, I'm <span class="highlight">Alex Developer</span></h1>
-                    <h2 class="hero-subtitle animate-fade-in">Full Stack Developer</h2>
-                    <p class="hero-description animate-fade-in">I build exceptional digital experiences with clean, efficient code and thoughtful design.</p>
-                    <div class="hero-buttons animate-fade-in">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="hero-image animate-slide-in">
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
-        </section>
+    <section class="about fade-in">
+      <h2>About Me</h2>
+      <p>
+        Experienced Cloud Engineer with a comprehensive background in AWS cloud computing, DevOps, and Site Reliability Engineering (SRE).
+        Proficient in architecting, implementing, and managing resilient cloud infrastructures...
+      </p>
+      <p>
+        When I am not working you can find me riding my bike, making something DIY or just gardening alsos I love 🐟fish-keeping as a hobby! 😊
+      </p>
+    </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a passionate developer with 5+ years of experience building web applications and solving complex problems with code.</p>
-                        <p>My journey in tech began when I built my first website at 15, and I've been hooked ever since. I specialize in JavaScript ecosystems but enjoy working across the stack.</p>
-                        <p>When I'm not coding, you can find me contributing to open source, reading about new technologies, or hiking in the mountains.</p>
-                        <div class="about-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Name:</span>
-                                <span class="detail-value">Alex Developer</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Email:</span>
-                                <span class="detail-value">alex@devportfolio.com</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Location:</span>
-                                <span class="detail-value">San Francisco, CA</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Availability:</span>
-                                <span class="detail-value">Open for opportunities</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <div class="image-frame"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="projects fade-in">
+      <h2>Personal Projects</h2>
+      <ul>
+        <li>3-Tier application deployment using Terraform over AWS</li>
+        <li>Created an AdBlock hosts.txt to filter out random ads</li>
+        <li>Process log collection PowerShell script in Windows</li>
+        <li>Web-containerization with Docker setup</li>
+        <p>Still ongoing 😊 will add more soon…</p>
+      </ul>
+    </section>
 
-        <section id="skills" class="section skills">
-            <div class="container">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Frontend</h3>
-                        <ul class="skill-list">
-                            <li class="skill-item">HTML5 & CSS3</li>
-                            <li class="skill-item">JavaScript (ES6+)</li>
-                            <li class="skill-item">React.js</li>
-                            <li class="skill-item">TypeScript</li>
-                            <li class="skill-item">Next.js</li>
-                            <li class="skill-item">Tailwind CSS</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Backend</h3>
-                        <ul class="skill-list">
-                            <li class="skill-item">Node.js</li>
-                            <li class="skill-item">Express</li>
-                            <li class="skill-item">Python</li>
-                            <li class="skill-item">Django</li>
-                            <li class="skill-item">PostgreSQL</li>
-                            <li class="skill-item">MongoDB</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3 class="skill-category-title">Tools & Other</h3>
-                        <ul class="skill-list">
-                            <li class="skill-item">Git & GitHub</li>
-                            <li class="skill-item">Docker</li>
-                            <li class="skill-item">AWS</li>
-                            <li class="skill-item">CI/CD</li>
-                            <li class="skill-item">Jest</li>
-                            <li class="skill-item">Figma</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="skills fade-in">
+      <h2>Skills</h2>
+				<ul class="skills-list">
+					<li><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS"> AWS</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform"> Terraform</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"> Jenkins</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"> Linux</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash"> Bash</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions"> GitHub Actions</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</li>
+					<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows"> PowerShell</li>
+				</ul>
+    </section>
 
-        <section id="projects" class="section projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                        </div>
-                        <div class="project-details">
-                            <h3 class="project-title">E-commerce Platform</h3>
-                            <p class="project-description">A full-featured online store with cart functionality, user authentication, and payment processing.</p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                        </div>
-                        <div class="project-details">
-                            <h3 class="project-title">Task Management App</h3>
-                            <p class="project-description">A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.</p>
-                            <div class="project-tech">
-                                <span>TypeScript</span>
-                                <span>Next.js</span>
-                                <span>Firebase</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                        </div>
-                        <div class="project-details">
-                            <h3 class="project-title">Data Visualization Dashboard</h3>
-                            <p class="project-description">Interactive dashboard for displaying and analyzing complex datasets with custom visualizations.</p>
-                            <div class="project-tech">
-                                <span>D3.js</span>
-                                <span>Python</span>
-                                <span>Flask</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
-                                <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="contact fade-in">
+      <h2>Contact Me</h2>
+      <p>📲 +91-9853909778</p>
+      <p>📧 <a href="mailto:soumya.ghadai1998@gmail.com">soumya.ghadai1998@gmail.com</a></p>
+      <p>🖇️ <a href="https://www.linkedin.com/in/soumya-ghadai/" target="_blank">LinkedIn Profile</a></p>
+      <p>📍 Bhubaneswar, Odisha, India</p>
+    </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3 class="contact-subtitle">Let's talk about your project</h3>
-                        <p>I'm currently available for freelance work or full-time positions. Feel free to reach out for collaboration or just to say hello!</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>alex@devportfolio.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+1 (555) 123-4567</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>San Francisco, CA</span>
-                            </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">DEV<span>PORTFOLIO</span></a>
-                    <p>Building digital experiences that matter.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> alex@devportfolio.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Dev Portfolio. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+    <footer>
+      <p>&copy;Soumya Ananda Ghadai. All rights reserved.</p>
     </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('toggle-mode');
+    const body = document.body;
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 </body>
 </html>
