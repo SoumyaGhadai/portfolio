@@ -1,264 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #f5f5f5;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            width: 100%;
-            padding: 20px 0;
-            background-color: #1a1a1a;
-            z-index: 999;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            color: #fff;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #00abf0;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(45deg, #081b29, #0ef);
-            color: #fff;
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #00abf0;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #0093c4;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-info {
-            padding: 20px;
-        }
-
-        .project-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 80px 20px;
-            background-color: #fff;
-        }
-
-        .skills-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .skill-item {
-            background-color: #00abf0;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .social-links {
-            margin-top: 30px;
-        }
-
-        .social-links a {
-            color: #1a1a1a;
-            font-size: 24px;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #00abf0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 36px;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soumya's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">Portfolio</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body class="light-mode">
+  <header>
+    <div class="profile-container">
+      <img src="profpic.jpg" alt="Soumya's photo" class="profile-pic">
+      <div>
+        <h1>Soumya Ananda Ghadai</h1>
+        <p>Cloud Engineer ☁️| DevOps 🧑‍💻| SRE</p>
+      </div>
+    </div>
+    <button id="toggle-mode">🌙 Dark Mode</button>
+  </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm John Doe</h1>
-            <p>Web Developer & UI Designer</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
-    </section>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Experienced Cloud Engineer with a comprehensive background in AWS cloud computing, DevOps, and Site Reliability Engineering (SRE). Proficient in architecting, implementing, and managing resilient cloud infrastructures, leveraging automation and monitoring tools to optimize performance and ensure high availability. Skilled in collaborating with cross-functional teams to align technical solutions with business objectives, with an approach to problem-solving and risk mitigation. 
+    </p>
+    <p>
+      When I am not working you can find me riding my bike 🚵, making something DIY or just gardening. I love fish🐟-keeping as a hobby! 😊
+    </p>
+  </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project 1" class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">E-commerce Website</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <!-- Add more project cards -->
-        </div>
-    </section>
+  <section class="projects">
+    <h2>Personal Projects</h2>
+    <ul>
+      <li>3-Tier application deployment using Terraform over AWS cloud</li>
+      <li>Created an AdBlock hosts.txt to filter out random ads</li>
+      <li>Process log collection PowerShell script in Windows</li>
+      <li>Web-containerization with Docker</li>
+      <p>Still ongoing 😊 will add more soon…</p>
+    </ul>
+  </section>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-item">HTML</div>
-            <div class="skill-item">CSS</div>
-            <div class="skill-item">JavaScript</div>
-            <div class="skill-item">React</div>
-            <div class="skill-item">Node.js</div>
-            <!-- Add more skills -->
-        </div>
-    </section>
+	<section class="skills">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>AWS (EC2, S3, VPC, IAM, CloudFormation)</li>
+    <li>Terraform & Infrastructure as Code</li>
+    <li>Docker & Containerization</li>
+    <li>DevOps Tools (Jenkins, GitHub Actions)</li>
+    <li>Monitoring (CloudWatch, Prometheus, Grafana)</li>
+    <li>Linux System Administration</li>
+    <li>PowerShell & Bash Scripting</li>
+    <li>CI/CD Pipelines</li>
+    <li>Python Basics</li>
+  </ul>
+		</section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <p>john.doe@email.com</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>📲 +91-9853909778</p>
+    <p>📧 <a href="mailto:soumya.ghadai1998@gmail.com">soumya.ghadai1998@gmail.com</a></p>
+    <p>🖇️ <a href="https://www.linkedin.com/in/soumya-ghadai/" target="_blank">LinkedIn Profile</a></p>
+    <p>📍 Bhubaneswar, Odisha, India</p>
+  </section>
+
+  <footer>
+    <p>&copy;Soumya Ananda Ghadai. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-mode');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 </body>
 </html>
